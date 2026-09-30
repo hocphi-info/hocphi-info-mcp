@@ -1,0 +1,38 @@
+name: Smoke
+
+# Daily check that the deployed service still answers and can reach the backend API.
+# The service is public and stateless, so this needs no Google credentials. Each run
+# wakes the service from zero (a few seconds of compute, far inside the free tier).
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    # Skip until the deploy variables exist (docs/gcp-setup.md).
+    if: vars.GCP_WIF_PROVIDER != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install Python 3.12 and deps
+        run: |
+          uv python install 3.12
+          uv sync --frozen
+
+      - name: Smoke test the live service
+        run: |
+          NUMBER="$(echo '${{ vars.GCP_WIF_PROVIDER }}' | cut -d/ -f2)"
+          URL="https://hocphi-info-mcp-${NUMBER}.${{ vars.GCP_REGION }}.run.app/mcp"
+          for attempt in 1 2 3; do
+            uv run python scripts/smoke_mcp.py "$URL" --call && exit 0
+            echo "attempt ${attempt} failed, retrying in 10s"; sleep 10
+          done
+          exit 1
