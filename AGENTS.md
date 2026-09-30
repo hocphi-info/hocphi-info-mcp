@@ -26,6 +26,10 @@ src/hocphi_mcp/
   api_client.py   # HocphiApi: retry, timeout, cache, schema validation
   api_models.py   # GENERATED from the backend openapi.json — never hand-edit
   logging.py      # structlog JSON (Cloud Logging severity/message)
+  app.py          # create_app(): Starlette + middleware + /healthz + MCP at /mcp (stateless)
+  __main__.py     # `python -m hocphi_mcp` (uvicorn, proxy headers, no access log)
+  middleware.py   # RequestContext (request id, trace, access log) + RateLimit; client_ip()
+  ratelimit.py    # in-memory token bucket (LRU-bounded)
   models.py       # hand-written tool output models (LLM-facing descriptions)
   server.py       # MCPServer + instructions for the model, registers the 7 tools
   tools/          # common.py (mappers, ToolFailure, tool_call log scope), search.py,
@@ -49,6 +53,16 @@ tests/            # respx fakes the backend; fixtures/ hold real API responses
   Run `make check` before committing.
 - The API is behind Cloudflare (some User-Agents get 403); default `API_BASE_URL` is the Fly origin
   and the client always sends an explicit `User-Agent`.
+
+## HTTP server notes
+
+- `create_app` takes `is None` checks, never `x or default`: `TokenBucketLimiter` defines `__len__`,
+  so an empty limiter is falsy (this bit us once).
+- Public, unauthenticated: keep `allowed_hosts` explicit in production, never disable DNS-rebinding
+  protection, never log raw IPs or long query text.
+- Tests use `httpx.ASGITransport` (open the lifespan with `app.router.lifespan_context(app)` inside
+  the test itself) and one real-uvicorn end-to-end test with the SDK `Client` (`legacy` and `auto`).
+- Logs must stay one JSON line each; tests read them from `capsys`.
 
 ## Git commit messages
 

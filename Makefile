@@ -12,6 +12,10 @@ help: ## Hien thi danh sach target
 install: ## Cai dependencies (uv sync)
 	uv sync
 
+.PHONY: dev
+dev: ## Chay may chu MCP o http://localhost:8080/mcp (PORT=... de doi cong)
+	$(UV) python -m hocphi_mcp
+
 .PHONY: lint fmt typecheck test check
 lint: ## ruff check + format --check
 	$(UV) ruff check .
