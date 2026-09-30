@@ -58,6 +58,7 @@ select = ["E", "F", "I", "UP", "B", "SIM", "C4", "ASYNC", "RUF"]
 # "Viet–Anh" co dau gach ngang en la chu that trong nhan hien thi.
 "src/hocphi_mcp/tools/common.py" = ["E501", "RUF001"]
 "tests/*" = ["E501"]
+"scripts/*" = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"
