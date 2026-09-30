@@ -34,6 +34,18 @@ DEPLOYER_EMAIL="${DEPLOYER_SA}@${PROJECT_ID}.iam.gserviceaccount.com"
 
 log() { printf '\n==> %s\n' "$*"; }
 
+# A just-created service account can take a few seconds to be visible to IAM
+# ("PERMISSION_DENIED ... or it may not exist"), so retry instead of failing.
+retry() {
+  local n
+  for n in 1 2 3 4 5 6; do
+    "$@" && return 0
+    echo "  (attempt ${n} failed, IAM may still be propagating; retrying in 10s)" >&2
+    sleep 10
+  done
+  return 1
+}
+
 log "Project ${PROJECT_ID}, region ${REGION}, repo ${GITHUB_REPO}"
 gcloud config set project "$PROJECT_ID" >/dev/null
 
@@ -97,7 +109,7 @@ gcloud artifacts repositories add-iam-policy-binding "$AR_REPO" \
   --member "serviceAccount:${DEPLOYER_EMAIL}" --role roles/artifactregistry.writer \
   >/dev/null
 # Deploying a revision "as" the runtime SA requires actAs on it, and only on it.
-gcloud iam service-accounts add-iam-policy-binding "$RUNTIME_EMAIL" \
+retry gcloud iam service-accounts add-iam-policy-binding "$RUNTIME_EMAIL" \
   --member "serviceAccount:${DEPLOYER_EMAIL}" --role roles/iam.serviceAccountUser \
   >/dev/null
 
@@ -122,7 +134,7 @@ else
   gcloud iam workload-identity-pools providers create-oidc "$PROVIDER" "${PROVIDER_ARGS[@]}"
 fi
 # Let identities from this repo (and only this repo) impersonate the deployer SA.
-gcloud iam service-accounts add-iam-policy-binding "$DEPLOYER_EMAIL" \
+retry gcloud iam service-accounts add-iam-policy-binding "$DEPLOYER_EMAIL" \
   --role roles/iam.workloadIdentityUser \
   --member "principalSet://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${POOL}/attribute.repository/${GITHUB_REPO}" \
   >/dev/null
