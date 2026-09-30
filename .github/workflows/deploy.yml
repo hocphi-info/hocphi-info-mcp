@@ -96,7 +96,9 @@ jobs:
       # The first request may hit a cold start, so retry a few times before failing.
       - name: Smoke test the live service
         run: |
-          URL="${{ steps.deploy.outputs.url }}/mcp"
+          # Not steps.deploy.outputs.url: that is the hashed *.a.run.app alias, which
+          # ALLOWED_HOSTS deliberately rejects (421). Test the canonical URL.
+          URL="https://${SERVICE_HOST}/mcp"
           for attempt in 1 2 3; do
             uv run python scripts/smoke_mcp.py "$URL" --call && exit 0
             echo "attempt ${attempt} failed, retrying in 10s"; sleep 10

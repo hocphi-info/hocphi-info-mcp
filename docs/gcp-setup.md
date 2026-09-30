@@ -83,3 +83,7 @@ started by hand from the Actions tab. `smoke.yml` repeats the smoke test daily.
 
 The service URL is `https://hocphi-info-mcp-<project number>.asia-southeast1.run.app/mcp`.
 `ALLOWED_HOSTS` is set to that host automatically; a custom domain must be added to it.
+
+Cloud Run also prints a second, hashed alias (`hocphi-info-mcp-<hash>-as.a.run.app`). The
+server rejects it with `421 Invalid Host` on purpose (`ALLOWED_HOSTS`), so always use the
+URL above.
