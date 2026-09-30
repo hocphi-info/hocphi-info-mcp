@@ -1,0 +1,99 @@
+{
+ "school": {
+  "slug": "hutech",
+  "name": "\u0110H C\u00f4ng ngh\u1ec7 TP.HCM",
+  "shortName": "HUTECH",
+  "cityCode": "HCM",
+  "category": "tu_thuc",
+  "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+ },
+ "major": {
+  "slug": "khoa-hoc-may-tinh",
+  "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+  "code": "7480101",
+  "taxonomy": {
+   "field": {
+    "code": "748",
+    "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+   },
+   "group": {
+    "code": "74801",
+    "name": "M\u00e1y t\u00ednh"
+   }
+  },
+  "aliases": [
+   "computer science",
+   "cs",
+   "khmt"
+  ],
+  "standardYears": 4,
+  "requiresPracticeLicense": false,
+  "practiceProfession": null
+ },
+ "programs": [
+  {
+   "program": {
+    "id": "01M1RDG6279JS201H1PCJX4APR",
+    "schoolSlug": "hutech",
+    "majorSlug": "khoa-hoc-may-tinh",
+    "track": "dai_tra",
+    "language": "vi",
+    "campus": null,
+    "displayName": null
+   },
+   "year1": {
+    "programId": "01M1RDG6279JS201H1PCJX4APR",
+    "academicYear": "2026-2027",
+    "amountPerYear": 61875000,
+    "isProjected": false,
+    "confidence": "published_unverified",
+    "source": {
+     "url": "https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026",
+     "docType": "thong_bao_hoc_phi",
+     "publishedDate": "2026-06-25"
+    }
+   },
+   "increase": null,
+   "yearlyAmounts": [
+    {
+     "academicYear": "2026-2027",
+     "amountPerYear": 61875000,
+     "isProjected": false
+    },
+    {
+     "academicYear": "2027-2028",
+     "amountPerYear": 68062500,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2028-2029",
+     "amountPerYear": 74868750,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2029-2030",
+     "amountPerYear": 82355625,
+     "isProjected": true
+    }
+   ],
+   "totalCourse": 287161875,
+   "totalWithLicense": 287161875
+  }
+ ],
+ "relatedMajors": [
+  {
+   "slug": "ky-thuat-may-tinh",
+   "name": "K\u1ef9 thu\u1eadt m\u00e1y t\u00ednh",
+   "nSchools": 2,
+   "minYear1Amount": 31500000,
+   "maxYear1Amount": 61875000
+  },
+  {
+   "slug": "tri-tue-nhan-tao",
+   "name": "Tr\u00ed tu\u1ec7 nh\u00e2n t\u1ea1o",
+   "nSchools": 2,
+   "minYear1Amount": 35500000,
+   "maxYear1Amount": 61875000
+  }
+ ]
+}

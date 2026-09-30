@@ -1,0 +1,83 @@
+{
+ "code": "74801",
+ "name": "M\u00e1y t\u00ednh",
+ "level": 2,
+ "nMajors": 4,
+ "nPrograms": 13,
+ "path": [
+  {
+   "code": "748",
+   "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "level": 1
+  },
+  {
+   "code": "74801",
+   "name": "M\u00e1y t\u00ednh",
+   "level": 2
+  }
+ ],
+ "children": [
+  {
+   "code": "7480101",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "level": 3,
+   "nMajors": 1,
+   "nPrograms": 7
+  },
+  {
+   "code": "7480107",
+   "name": "Tr\u00ed tu\u1ec7 nh\u00e2n t\u1ea1o",
+   "level": 3,
+   "nMajors": 1,
+   "nPrograms": 3
+  },
+  {
+   "code": "7480106",
+   "name": "K\u1ef9 thu\u1eadt m\u00e1y t\u00ednh",
+   "level": 3,
+   "nMajors": 1,
+   "nPrograms": 2
+  },
+  {
+   "code": "7480103",
+   "name": "K\u1ef9 thu\u1eadt ph\u1ea7n m\u1ec1m",
+   "level": 3,
+   "nMajors": 1,
+   "nPrograms": 1
+  }
+ ],
+ "majors": [
+  {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "nSchools": 3,
+   "minYear1Amount": 31500000,
+   "maxYear1Amount": 61875000
+  },
+  {
+   "slug": "tri-tue-nhan-tao",
+   "name": "Tr\u00ed tu\u1ec7 nh\u00e2n t\u1ea1o",
+   "code": "7480107",
+   "nSchools": 3,
+   "minYear1Amount": 35500000,
+   "maxYear1Amount": 61875000
+  },
+  {
+   "slug": "ky-thuat-may-tinh",
+   "name": "K\u1ef9 thu\u1eadt m\u00e1y t\u00ednh",
+   "code": "7480106",
+   "nSchools": 2,
+   "minYear1Amount": 31500000,
+   "maxYear1Amount": 61875000
+  },
+  {
+   "slug": "ky-thuat-phan-mem",
+   "name": "K\u1ef9 thu\u1eadt ph\u1ea7n m\u1ec1m",
+   "code": "7480103",
+   "nSchools": 1,
+   "minYear1Amount": null,
+   "maxYear1Amount": null
+  }
+ ]
+}

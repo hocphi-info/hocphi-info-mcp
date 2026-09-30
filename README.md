@@ -5,9 +5,24 @@ Public, **read-only** [MCP](https://modelcontextprotocol.io) server for
 Lets an AI assistant look up and compare tuition by school and major and get the **same
 numbers as the website**, with the academic year and source, instead of guessing.
 
-> **Status: work in progress.** This repo currently contains the foundation only
-> (typed API client, models generated from the backend's OpenAPI, CI). The MCP tools,
-> HTTP server and Cloud Run deployment land in the next steps.
+> **Status: work in progress.** The typed API client, generated models, CI and the seven
+> tools are done. The HTTP server (Streamable HTTP, rate limiting), Docker image and Cloud
+> Run deployment land in the next steps.
+
+## Tools (all read-only)
+
+| Tool | What it does |
+|---|---|
+| `search_majors` | Find majors by name/alias (`cntt`, `khmt`, diacritics optional); gives school slugs to use next. |
+| `search_schools` | Find schools with their standard-track year-1 range. |
+| `get_major_tuition` | Every program of one major at one school, with source, academic year, projections. |
+| `compare_programs` | Compare 2-4 programs; flags missing data and mixed academic years. |
+| `estimate_total_cost` | The backend's estimate for the whole course, with the assumptions stated. |
+| `explore_major_taxonomy` | Browse the Ministry classification (field → group → major) with data. |
+| `find_related_majors` | Other majors in the same Ministry group, for comparison. |
+
+Every amount is per academic year in VND (also in millions). Only `year1` is published by the
+school; later years are projections (`is_projected`). Missing data is reported explicitly.
 
 ## How it works
 
