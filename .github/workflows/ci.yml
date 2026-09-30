@@ -49,3 +49,37 @@ jobs:
 
       - name: pytest
         run: uv run pytest -q
+
+  # Build the real image and talk to it with the SDK client: catches a broken Dockerfile,
+  # a missing file in the runtime stage, or a server that does not start/answer MCP.
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - run: uv python install 3.12
+      - run: uv sync --frozen
+
+      - name: Build image (linux/amd64, as on Cloud Run)
+        run: docker build --platform linux/amd64 -t hocphi-mcp:ci .
+
+      - name: Run container
+        run: |
+          docker run -d --name mcp -p 8080:8080 \
+            -e ALLOWED_HOSTS="localhost:*,127.0.0.1:*" hocphi-mcp:ci
+          for i in $(seq 1 30); do
+            curl -fsS http://localhost:8080/healthz && break || sleep 1
+          done
+
+      - name: Smoke test (list tools, both protocol modes)
+        run: uv run python scripts/smoke_mcp.py http://localhost:8080/mcp
+
+      - name: Container logs
+        if: always()
+        run: docker logs mcp
