@@ -1,0 +1,291 @@
+{
+ "school": {
+  "slug": "dh-bach-khoa-tphcm",
+  "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+  "shortName": "HCMUT",
+  "cityCode": "HCM",
+  "category": "cong_lap_tu_chu",
+  "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+ },
+ "major": {
+  "slug": "khoa-hoc-may-tinh",
+  "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+  "code": "7480101",
+  "taxonomy": {
+   "field": {
+    "code": "748",
+    "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+   },
+   "group": {
+    "code": "74801",
+    "name": "M\u00e1y t\u00ednh"
+   }
+  },
+  "aliases": [
+   "computer science",
+   "cs",
+   "khmt"
+  ],
+  "standardYears": 4,
+  "requiresPracticeLicense": false,
+  "practiceProfession": null
+ },
+ "programs": [
+  {
+   "program": {
+    "id": "01M24ZWQVQTD6T3R058CKJ9SND",
+    "schoolSlug": "dh-bach-khoa-tphcm",
+    "majorSlug": "khoa-hoc-may-tinh",
+    "track": "dai_tra",
+    "language": "vi",
+    "campus": null,
+    "displayName": null
+   },
+   "year1": {
+    "programId": "01M24ZWQVQTD6T3R058CKJ9SND",
+    "academicYear": "2026-2027",
+    "amountPerYear": 31500000,
+    "isProjected": false,
+    "confidence": "published_unverified",
+    "source": {
+     "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
+     "docType": "thong_bao_hoc_phi",
+     "publishedDate": "2026-06-18"
+    }
+   },
+   "increase": null,
+   "yearlyAmounts": [
+    {
+     "academicYear": "2026-2027",
+     "amountPerYear": 31500000,
+     "isProjected": false
+    },
+    {
+     "academicYear": "2027-2028",
+     "amountPerYear": 34650000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2028-2029",
+     "amountPerYear": 38115000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2029-2030",
+     "amountPerYear": 41926500,
+     "isProjected": true
+    }
+   ],
+   "totalCourse": 146191500,
+   "totalWithLicense": 146191500
+  },
+  {
+   "program": {
+    "id": "01M24ZWR27A0RPN5YZGT90MK56",
+    "schoolSlug": "dh-bach-khoa-tphcm",
+    "majorSlug": "khoa-hoc-may-tinh",
+    "track": "chat_luong_cao",
+    "language": "en",
+    "campus": null,
+    "displayName": null
+   },
+   "year1": {
+    "programId": "01M24ZWR27A0RPN5YZGT90MK56",
+    "academicYear": "2026-2027",
+    "amountPerYear": 88000000,
+    "isProjected": false,
+    "confidence": "published_unverified",
+    "source": {
+     "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
+     "docType": "thong_bao_hoc_phi",
+     "publishedDate": "2026-06-18"
+    }
+   },
+   "increase": null,
+   "yearlyAmounts": [
+    {
+     "academicYear": "2026-2027",
+     "amountPerYear": 88000000,
+     "isProjected": false
+    },
+    {
+     "academicYear": "2027-2028",
+     "amountPerYear": 96800000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2028-2029",
+     "amountPerYear": 106480000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2029-2030",
+     "amountPerYear": 117128000,
+     "isProjected": true
+    }
+   ],
+   "totalCourse": 408408000,
+   "totalWithLicense": 408408000
+  },
+  {
+   "program": {
+    "id": "01M24ZWR4YHPVTFP7RZFF8TJQD",
+    "schoolSlug": "dh-bach-khoa-tphcm",
+    "majorSlug": "khoa-hoc-may-tinh",
+    "track": "chat_luong_cao",
+    "language": "vi",
+    "campus": null,
+    "displayName": null
+   },
+   "year1": {
+    "programId": "01M24ZWR4YHPVTFP7RZFF8TJQD",
+    "academicYear": "2026-2027",
+    "amountPerYear": 63000000,
+    "isProjected": false,
+    "confidence": "published_unverified",
+    "source": {
+     "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
+     "docType": "thong_bao_hoc_phi",
+     "publishedDate": "2026-06-18"
+    }
+   },
+   "increase": null,
+   "yearlyAmounts": [
+    {
+     "academicYear": "2026-2027",
+     "amountPerYear": 63000000,
+     "isProjected": false
+    },
+    {
+     "academicYear": "2027-2028",
+     "amountPerYear": 69300000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2028-2029",
+     "amountPerYear": 76230000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2029-2030",
+     "amountPerYear": 83853000,
+     "isProjected": true
+    }
+   ],
+   "totalCourse": 292383000,
+   "totalWithLicense": 292383000
+  },
+  {
+   "program": {
+    "id": "01M24ZWR2Q63FEWPZT3K1GD014",
+    "schoolSlug": "dh-bach-khoa-tphcm",
+    "majorSlug": "khoa-hoc-may-tinh",
+    "track": "tien_tien",
+    "language": "en",
+    "campus": null,
+    "displayName": null
+   },
+   "year1": {
+    "programId": "01M24ZWR2Q63FEWPZT3K1GD014",
+    "academicYear": "2026-2027",
+    "amountPerYear": 88000000,
+    "isProjected": false,
+    "confidence": "published_unverified",
+    "source": {
+     "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
+     "docType": "thong_bao_hoc_phi",
+     "publishedDate": "2026-06-18"
+    }
+   },
+   "increase": null,
+   "yearlyAmounts": [
+    {
+     "academicYear": "2026-2027",
+     "amountPerYear": 88000000,
+     "isProjected": false
+    },
+    {
+     "academicYear": "2027-2028",
+     "amountPerYear": 96800000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2028-2029",
+     "amountPerYear": 106480000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2029-2030",
+     "amountPerYear": 117128000,
+     "isProjected": true
+    }
+   ],
+   "totalCourse": 408408000,
+   "totalWithLicense": 408408000
+  },
+  {
+   "program": {
+    "id": "01M24ZWR36M6KY9884NQ8Q4MG5",
+    "schoolSlug": "dh-bach-khoa-tphcm",
+    "majorSlug": "khoa-hoc-may-tinh",
+    "track": "quoc_te",
+    "language": "en",
+    "campus": null,
+    "displayName": null
+   },
+   "year1": {
+    "programId": "01M24ZWR36M6KY9884NQ8Q4MG5",
+    "academicYear": "2026-2027",
+    "amountPerYear": 88000000,
+    "isProjected": false,
+    "confidence": "published_unverified",
+    "source": {
+     "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
+     "docType": "thong_bao_hoc_phi",
+     "publishedDate": "2026-06-18"
+    }
+   },
+   "increase": null,
+   "yearlyAmounts": [
+    {
+     "academicYear": "2026-2027",
+     "amountPerYear": 88000000,
+     "isProjected": false
+    },
+    {
+     "academicYear": "2027-2028",
+     "amountPerYear": 96800000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2028-2029",
+     "amountPerYear": 106480000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2029-2030",
+     "amountPerYear": 117128000,
+     "isProjected": true
+    }
+   ],
+   "totalCourse": 408408000,
+   "totalWithLicense": 408408000
+  }
+ ],
+ "relatedMajors": [
+  {
+   "slug": "ky-thuat-may-tinh",
+   "name": "K\u1ef9 thu\u1eadt m\u00e1y t\u00ednh",
+   "nSchools": 2,
+   "minYear1Amount": 31500000,
+   "maxYear1Amount": 61875000
+  },
+  {
+   "slug": "tri-tue-nhan-tao",
+   "name": "Tr\u00ed tu\u1ec7 nh\u00e2n t\u1ea1o",
+   "nSchools": 2,
+   "minYear1Amount": 35500000,
+   "maxYear1Amount": 61875000
+  }
+ ]
+}

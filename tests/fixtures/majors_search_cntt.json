@@ -1,0 +1,359 @@
+[
+ {
+  "program": {
+   "id": "01M24ZWR64EX3V0YBN4ZKCZCY2",
+   "schoolSlug": "dh-bach-khoa-tphcm",
+   "majorSlug": "cong-nghe-thong-tin",
+   "track": "quoc_te",
+   "language": "en",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "major": {
+   "slug": "cong-nghe-thong-tin",
+   "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "code": "7480201",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74802",
+     "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    }
+   },
+   "aliases": [
+    "cntt",
+    "information technology",
+    "it"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M24ZWR64EX3V0YBN4ZKCZCY2",
+   "academicYear": "2026-2027",
+   "amountPerYear": 268000000,
+   "isProjected": false,
+   "confidence": "estimated",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1RDG61RP8H6WYBDFDB2TNG4",
+   "schoolSlug": "hutech",
+   "majorSlug": "cong-nghe-thong-tin",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "hutech",
+   "name": "\u0110H C\u00f4ng ngh\u1ec7 TP.HCM",
+   "shortName": "HUTECH",
+   "cityCode": "HCM",
+   "category": "tu_thuc",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+  },
+  "major": {
+   "slug": "cong-nghe-thong-tin",
+   "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "code": "7480201",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74802",
+     "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    }
+   },
+   "aliases": [
+    "cntt",
+    "information technology",
+    "it"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1RDG61RP8H6WYBDFDB2TNG4",
+   "academicYear": "2026-2027",
+   "amountPerYear": 61875000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1R0RR4GFZWJFZYYNZ16EAWW",
+   "schoolSlug": "uit",
+   "majorSlug": "cong-nghe-thong-tin",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "uit",
+   "name": "\u0110H C\u00f4ng ngh\u1ec7 Th\u00f4ng tin (\u0110HQG-HCM)",
+   "shortName": "UIT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png"
+  },
+  "major": {
+   "slug": "cong-nghe-thong-tin",
+   "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "code": "7480201",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74802",
+     "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    }
+   },
+   "aliases": [
+    "cntt",
+    "information technology",
+    "it"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1R0RR4GFZWJFZYYNZ16EAWW",
+   "academicYear": "2025-2026",
+   "amountPerYear": 37000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1R0RR4JEMV2CVV1KZEAJKD9",
+   "schoolSlug": "uit",
+   "majorSlug": "cong-nghe-thong-tin",
+   "track": "tien_tien",
+   "language": "en",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "uit",
+   "name": "\u0110H C\u00f4ng ngh\u1ec7 Th\u00f4ng tin (\u0110HQG-HCM)",
+   "shortName": "UIT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png"
+  },
+  "major": {
+   "slug": "cong-nghe-thong-tin",
+   "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "code": "7480201",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74802",
+     "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    }
+   },
+   "aliases": [
+    "cntt",
+    "information technology",
+    "it"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1R0RR4JEMV2CVV1KZEAJKD9",
+   "academicYear": "2025-2026",
+   "amountPerYear": 55000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1RDG65ZRR6J21RB6ND5AFVB",
+   "schoolSlug": "dh-hoa-sen",
+   "majorSlug": "cong-nghe-thong-tin",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-hoa-sen",
+   "name": "\u0110H Hoa Sen",
+   "shortName": "HSU",
+   "cityCode": "HCM",
+   "category": "tu_thuc",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo-E-BHSU.png/330px-Logo-E-BHSU.png"
+  },
+  "major": {
+   "slug": "cong-nghe-thong-tin",
+   "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "code": "7480201",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74802",
+     "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    }
+   },
+   "aliases": [
+    "cntt",
+    "information technology",
+    "it"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1RDG65ZRR6J21RB6ND5AFVB",
+   "academicYear": "2026-2027",
+   "amountPerYear": 77000000,
+   "isProjected": false,
+   "confidence": "estimated",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1SWMN5EEVRC7NMPNHYRFMC5",
+   "schoolSlug": "ou-tphcm",
+   "majorSlug": "cong-nghe-thong-tin",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "ou-tphcm",
+   "name": "\u0110H M\u1edf TP.HCM",
+   "shortName": "OU",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://upload.wikimedia.org/wikipedia/vi/b/b2/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png"
+  },
+  "major": {
+   "slug": "cong-nghe-thong-tin",
+   "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "code": "7480201",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74802",
+     "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    }
+   },
+   "aliases": [
+    "cntt",
+    "information technology",
+    "it"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1SWMN5EEVRC7NMPNHYRFMC5",
+   "academicYear": "2026-2027",
+   "amountPerYear": 32000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1REAY598BBW52ANCVRX492K",
+   "schoolSlug": "dh-quoc-te-tphcm",
+   "majorSlug": "cong-nghe-thong-tin",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-quoc-te-tphcm",
+   "name": "\u0110H Qu\u1ed1c t\u1ebf (\u0110HQG-HCM)",
+   "shortName": "IU",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png"
+  },
+  "major": {
+   "slug": "cong-nghe-thong-tin",
+   "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "code": "7480201",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74802",
+     "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    }
+   },
+   "aliases": [
+    "cntt",
+    "information technology",
+    "it"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1REAY598BBW52ANCVRX492K",
+   "academicYear": "2025-2026",
+   "amountPerYear": 55000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ }
+]

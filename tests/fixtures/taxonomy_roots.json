@@ -1,0 +1,148 @@
+{
+ "fields": [
+  {
+   "code": "752",
+   "name": "K\u1ef9 thu\u1eadt",
+   "level": 1,
+   "nMajors": 21,
+   "nPrograms": 36
+  },
+  {
+   "code": "734",
+   "name": "Kinh doanh v\u00e0 qu\u1ea3n l\u00fd",
+   "level": 1,
+   "nMajors": 11,
+   "nPrograms": 24
+  },
+  {
+   "code": "748",
+   "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "level": 1,
+   "nMajors": 6,
+   "nPrograms": 21
+  },
+  {
+   "code": "722",
+   "name": "Nh\u00e2n v\u0103n",
+   "level": 1,
+   "nMajors": 10,
+   "nPrograms": 20
+  },
+  {
+   "code": "772",
+   "name": "S\u1ee9c kh\u1ecfe",
+   "level": 1,
+   "nMajors": 14,
+   "nPrograms": 19
+  },
+  {
+   "code": "758",
+   "name": "Ki\u1ebfn tr\u00fac v\u00e0 x\u00e2y d\u1ef1ng",
+   "level": 1,
+   "nMajors": 10,
+   "nPrograms": 14
+  },
+  {
+   "code": "746",
+   "name": "To\u00e1n v\u00e0 th\u1ed1ng k\u00ea",
+   "level": 1,
+   "nMajors": 5,
+   "nPrograms": 11
+  },
+  {
+   "code": "751",
+   "name": "C\u00f4ng ngh\u1ec7 k\u1ef9 thu\u1eadt",
+   "level": 1,
+   "nMajors": 8,
+   "nPrograms": 11
+  },
+  {
+   "code": "781",
+   "name": "Du l\u1ecbch, kh\u00e1ch s\u1ea1n, th\u1ec3 thao v\u00e0 d\u1ecbch v\u1ee5 c\u00e1 nh\u00e2n",
+   "level": 1,
+   "nMajors": 5,
+   "nPrograms": 8
+  },
+  {
+   "code": "731",
+   "name": "Khoa h\u1ecdc x\u00e3 h\u1ed9i v\u00e0 h\u00e0nh vi",
+   "level": 1,
+   "nMajors": 4,
+   "nPrograms": 7
+  },
+  {
+   "code": "721",
+   "name": "Ngh\u1ec7 thu\u1eadt",
+   "level": 1,
+   "nMajors": 4,
+   "nPrograms": 6
+  },
+  {
+   "code": "742",
+   "name": "Khoa h\u1ecdc s\u1ef1 s\u1ed1ng",
+   "level": 1,
+   "nMajors": 2,
+   "nPrograms": 6
+  },
+  {
+   "code": "744",
+   "name": "Khoa h\u1ecdc t\u1ef1 nhi\u00ean",
+   "level": 1,
+   "nMajors": 6,
+   "nPrograms": 6
+  },
+  {
+   "code": "732",
+   "name": "B\u00e1o ch\u00ed v\u00e0 th\u00f4ng tin",
+   "level": 1,
+   "nMajors": 4,
+   "nPrograms": 4
+  },
+  {
+   "code": "754",
+   "name": "S\u1ea3n xu\u1ea5t v\u00e0 ch\u1ebf bi\u1ebfn",
+   "level": 1,
+   "nMajors": 2,
+   "nPrograms": 4
+  },
+  {
+   "code": "785",
+   "name": "M\u00f4i tr\u01b0\u1eddng v\u00e0 b\u1ea3o v\u1ec7 m\u00f4i tr\u01b0\u1eddng",
+   "level": 1,
+   "nMajors": 3,
+   "nPrograms": 4
+  },
+  {
+   "code": "738",
+   "name": "Ph\u00e1p lu\u1eadt",
+   "level": 1,
+   "nMajors": 2,
+   "nPrograms": 2
+  },
+  {
+   "code": "714",
+   "name": "Khoa h\u1ecdc gi\u00e1o d\u1ee5c v\u00e0 \u0111\u00e0o t\u1ea1o gi\u00e1o vi\u00ean",
+   "level": 1,
+   "nMajors": 1,
+   "nPrograms": 1
+  },
+  {
+   "code": "764",
+   "name": "Th\u00fa y",
+   "level": 1,
+   "nMajors": 1,
+   "nPrograms": 1
+  },
+  {
+   "code": "776",
+   "name": "D\u1ecbch v\u1ee5 x\u00e3 h\u1ed9i",
+   "level": 1,
+   "nMajors": 1,
+   "nPrograms": 1
+  }
+ ],
+ "unclassified": {
+  "nMajors": 23,
+  "nPrograms": 24
+ }
+}

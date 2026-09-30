@@ -1,0 +1,249 @@
+[
+ {
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "stats": {
+   "nPrograms": 41,
+   "minAmount": 31500000,
+   "minMajorName": "C\u00f4ng ngh\u1ec7 k\u1ef9 thu\u1eadt v\u1eadt li\u1ec7u x\u00e2y d\u1ef1ng",
+   "medianAmount": 31500000.0,
+   "maxAmount": 31500000,
+   "maxMajorName": "C\u00f4ng ngh\u1ec7 k\u1ef9 thu\u1eadt v\u1eadt li\u1ec7u x\u00e2y d\u1ef1ng",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "hutech",
+   "name": "\u0110H C\u00f4ng ngh\u1ec7 TP.HCM",
+   "shortName": "HUTECH",
+   "cityCode": "HCM",
+   "category": "tu_thuc",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+  },
+  "stats": {
+   "nPrograms": 64,
+   "minAmount": 61200000,
+   "minMajorName": "D\u01b0\u1ee3c h\u1ecdc",
+   "medianAmount": 68000000.0,
+   "maxAmount": 160000000,
+   "maxMajorName": "Y khoa",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "uit",
+   "name": "\u0110H C\u00f4ng ngh\u1ec7 Th\u00f4ng tin (\u0110HQG-HCM)",
+   "shortName": "UIT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png"
+  },
+  "stats": {
+   "nPrograms": 1,
+   "minAmount": 37000000,
+   "minMajorName": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "medianAmount": 37000000.0,
+   "maxAmount": 37000000,
+   "maxMajorName": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "dh-hoa-sen",
+   "name": "\u0110H Hoa Sen",
+   "shortName": "HSU",
+   "cityCode": "HCM",
+   "category": "tu_thuc",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo-E-BHSU.png/330px-Logo-E-BHSU.png"
+  },
+  "stats": {
+   "nPrograms": 1,
+   "minAmount": 77000000,
+   "minMajorName": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "medianAmount": 77000000.0,
+   "maxAmount": 77000000,
+   "maxMajorName": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "ussh-tphcm",
+   "name": "\u0110H KHXH&NV TP.HCM (\u0110HQG-HCM)",
+   "shortName": "USSH",
+   "cityCode": "HCM",
+   "category": "cong_lap",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/4/49/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/330px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_X%C3%A3_h%E1%BB%99i_v%C3%A0_Nh%C3%A2n_v%C4%83n%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png"
+  },
+  "stats": {
+   "nPrograms": 3,
+   "minAmount": 22000000,
+   "minMajorName": "Tri\u1ebft h\u1ecdc",
+   "medianAmount": 33000000.0,
+   "maxAmount": 37000000,
+   "maxMajorName": "B\u00e1o ch\u00ed",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "dh-khoa-hoc-tu-nhien-tphcm",
+   "name": "\u0110H Khoa h\u1ecdc T\u1ef1 nhi\u00ean TP.HCM",
+   "shortName": "HCMUS",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/c/ca/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/3840px-Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png"
+  },
+  "stats": {
+   "nPrograms": 27,
+   "minAmount": 28400000,
+   "minMajorName": "K\u1ef9 thu\u1eadt h\u1ea1t nh\u00e2n",
+   "medianAmount": 34200000.0,
+   "maxAmount": 35500000,
+   "maxMajorName": "K\u1ef9 thu\u1eadt \u0111i\u1ec7n t\u1eed - vi\u1ec5n th\u00f4ng",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "ou-tphcm",
+   "name": "\u0110H M\u1edf TP.HCM",
+   "shortName": "OU",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://upload.wikimedia.org/wikipedia/vi/b/b2/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png"
+  },
+  "stats": {
+   "nPrograms": 6,
+   "minAmount": 26500000,
+   "minMajorName": "Kinh t\u1ebf",
+   "medianAmount": 31000000.0,
+   "maxAmount": 32000000,
+   "maxMajorName": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "ulis",
+   "name": "\u0110H Ngo\u1ea1i ng\u1eef (\u0110HQGHN)",
+   "shortName": "ULIS",
+   "cityCode": "HN",
+   "category": "cong_lap",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/8f/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90HQGHN.svg/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%91%E1%BA%A1i_h%E1%BB%8Dc_ngo%E1%BA%A1i_ng%E1%BB%AF%2C_%C4%90HQGHN.svg.png"
+  },
+  "stats": {
+   "nPrograms": 10,
+   "minAmount": 31000000,
+   "minMajorName": "Ng\u00f4n ng\u1eef \u1ea2 R\u1eadp",
+   "medianAmount": 42000000.0,
+   "maxAmount": 42000000,
+   "maxMajorName": "Ng\u00f4n ng\u1eef Ph\u00e1p",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "dh-quoc-te-tphcm",
+   "name": "\u0110H Qu\u1ed1c t\u1ebf (\u0110HQG-HCM)",
+   "shortName": "IU",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png"
+  },
+  "stats": {
+   "nPrograms": 23,
+   "minAmount": 50000000,
+   "minMajorName": "Qu\u1ea3n tr\u1ecb kinh doanh",
+   "medianAmount": 55000000.0,
+   "maxAmount": 60000000,
+   "maxMajorName": "H\u00f3a h\u1ecdc (H\u00f3a sinh)",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "hcmute",
+   "name": "\u0110H S\u01b0 ph\u1ea1m K\u1ef9 thu\u1eadt TP.HCM",
+   "shortName": "HCMUTE",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_S%C6%B0_Ph%E1%BA%A1m_K%E1%BB%B9_Thu%E1%BA%ADt_TP_H%E1%BB%93_Ch%C3%AD_Minh.png/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_S%C6%B0_Ph%E1%BA%A1m_K%E1%BB%B9_Thu%E1%BA%ADt_TP_H%E1%BB%93_Ch%C3%AD_Minh.png"
+  },
+  "stats": {
+   "nPrograms": 1,
+   "minAmount": 40000000,
+   "minMajorName": "C\u00f4ng ngh\u1ec7 truy\u1ec1n th\u00f4ng",
+   "medianAmount": 40000000.0,
+   "maxAmount": 40000000,
+   "maxMajorName": "C\u00f4ng ngh\u1ec7 truy\u1ec1n th\u00f4ng",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "tdtu",
+   "name": "\u0110H T\u00f4n \u0110\u1ee9c Th\u1eafng",
+   "shortName": "TDTU",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/1/1b/T%C4%90T_logo.png/330px-T%C4%90T_logo.png"
+  },
+  "stats": {
+   "nPrograms": 4,
+   "minAmount": 31260000,
+   "minMajorName": "K\u1ebf to\u00e1n",
+   "medianAmount": 33925000.0,
+   "maxAmount": 68460000,
+   "maxMajorName": "D\u01b0\u1ee3c h\u1ecdc",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "dh-van-lang",
+   "name": "\u0110H V\u0103n Lang",
+   "shortName": "VLU",
+   "cityCode": "HCM",
+   "category": "tu_thuc",
+   "logoUrl": "https://vuainnhanh.com/wp-content/uploads/2023/02/logo-van-lang-896x1024-1.png"
+  },
+  "stats": {
+   "nPrograms": 1,
+   "minAmount": 70000000,
+   "minMajorName": "Du l\u1ecbch",
+   "medianAmount": 70000000.0,
+   "maxAmount": 70000000,
+   "maxMajorName": "Du l\u1ecbch",
+   "increaseSummary": "\u2014"
+  }
+ },
+ {
+  "school": {
+   "slug": "ump",
+   "name": "\u0110H Y D\u01b0\u1ee3c TP.HCM",
+   "shortName": "UMP",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/6/64/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/250px-Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Y_D%C6%B0%E1%BB%A3c_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png"
+  },
+  "stats": {
+   "nPrograms": 17,
+   "minAmount": 30000000,
+   "minMajorName": "T\u00e2m l\u00fd h\u1ecdc",
+   "medianAmount": 48000000.0,
+   "maxAmount": 90000000,
+   "maxMajorName": "R\u0103ng - H\u00e0m - M\u1eb7t",
+   "increaseSummary": "\u2014"
+  }
+ }
+]
