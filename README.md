@@ -7,7 +7,7 @@ numbers as the website**, with the academic year and source, instead of guessing
 
 > **Status: work in progress.** The typed API client, generated models, CI, the seven tools and
 > the HTTP server (Streamable HTTP, host/origin checks, rate limiting, JSON logs) are done. The
-> Docker image and Cloud Run deployment land in the next steps.
+> Docker image is done too; the Cloud Run deployment lands in the next steps.
 
 ## Tools (all read-only)
 
@@ -60,6 +60,19 @@ claude mcp add --transport http hocphi-local http://localhost:8080/mcp
   a `tool_call` line per tool call (tool, duration, result count, error code) and library
   logs, all sharing `request_id` (and `logging.googleapis.com/trace` when `GCP_PROJECT` is
   set). Raw IPs are never logged.
+
+## Docker
+
+```bash
+docker build -t hocphi-mcp .
+docker run --rm -p 8080:8080 -e ALLOWED_HOSTS="localhost:*,127.0.0.1:*" hocphi-mcp
+uv run python scripts/smoke_mcp.py http://localhost:8080/mcp --call   # lists the 7 tools, calls one
+```
+
+Multi-stage image (uv build stage → slim runtime), runs as a non-root user, honors `$PORT`
+(Cloud Run) and stops cleanly on `SIGTERM`. In production set `ALLOWED_HOSTS` to the Cloud Run
+host and `GCP_PROJECT` for trace-linked logs. See [`docs/design.md`](docs/design.md) for the
+architecture, trade-offs and failure modes.
 
 ## Develop
 
