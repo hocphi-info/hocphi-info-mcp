@@ -51,7 +51,7 @@ MAX_SEARCH_LEN = 80
 def _check_slug(value: str, what: str) -> str:
     if not SLUG_RE.fullmatch(value):
         raise InvalidArgument(
-            f"{what} khong hop le: chi gom a-z, 0-9, '-' (toi da 80)."
+            f"{what} is invalid: use lowercase letters, digits and '-' (max 80)."
         )
     return value
 
@@ -62,7 +62,7 @@ def _check_search(value: str | None) -> str | None:
     value = value.strip()
     if not MIN_SEARCH_LEN <= len(value) <= MAX_SEARCH_LEN:
         raise InvalidArgument(
-            f"Tu khoa tim kiem phai dai {MIN_SEARCH_LEN}-{MAX_SEARCH_LEN} ky tu."
+            f"Search text must be {MIN_SEARCH_LEN}-{MAX_SEARCH_LEN} characters."
         )
     return value
 
@@ -133,8 +133,7 @@ class HocphiApi:
     async def taxonomy_node(self, code: str) -> TaxonomyNodeDetailOut:
         if not TAXONOMY_CODE_RE.fullmatch(code):
             raise InvalidArgument(
-                "Ma phai la 3, 5 hoac 7 chu so (linh vuc, nhom nganh, nganh) "
-                "hoac 'unclassified'."
+                "Code must be 3, 5 or 7 digits (field, group, major) or 'unclassified'."
             )
         return await self._get(
             f"/api/v1/taxonomy/{code}",
@@ -162,7 +161,7 @@ class HocphiApi:
                     "upstream_schema_mismatch", path=path, errors=exc.error_count()
                 )
                 raise BadResponse(
-                    f"Phan hoi tu {path} khong khop schema (BE da doi hop dong?)."
+                    f"Unexpected response shape from {path} (backend contract changed?)."
                 ) from exc
 
         value, cache_hit = await self._cache.get_or_load(key, ttl, load)
@@ -173,7 +172,7 @@ class HocphiApi:
     async def _fetch_json(self, path: str, params: dict[str, str] | None) -> Any:
         started = self._clock()
         attempts = 0
-        last: str = "khong ro"
+        last: str = "unknown"
         while attempts < self._s.http_max_attempts:
             attempts += 1
             try:
@@ -185,7 +184,7 @@ class HocphiApi:
                     logger.info(
                         "upstream_call", path=path, status=404, attempts=attempts
                     )
-                    raise NotFound(f"Khong tim thay: {path}")
+                    raise NotFound("Not found.")
                 if resp.is_success:
                     logger.info(
                         "upstream_call",
@@ -198,18 +197,18 @@ class HocphiApi:
                     try:
                         return resp.json()
                     except ValueError as exc:
-                        raise BadResponse(f"{path} khong tra ve JSON hop le.") from exc
+                        raise BadResponse(f"{path} did not return valid JSON.") from exc
                 if resp.status_code not in RETRYABLE_STATUS:
                     logger.error(
                         "upstream_bad_status", path=path, status=resp.status_code
                     )
-                    raise BadResponse(f"{path} tra ve HTTP {resp.status_code}.")
+                    raise BadResponse(f"{path} returned HTTP {resp.status_code}.")
                 last = f"HTTP {resp.status_code}"
             if attempts < self._s.http_max_attempts:
                 await self._sleep(BACKOFF_BASE_S * 2 ** (attempts - 1))
 
         logger.warning("upstream_unavailable", path=path, attempts=attempts, last=last)
         raise Unavailable(
-            f"API hocphi tam thoi khong tra loi ({last}). Thu lai sau it phut.",
+            f"The hocphi data service is temporarily unavailable ({last}).",
             attempts=attempts,
         )
