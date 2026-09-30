@@ -11,6 +11,7 @@ dependencies = [
     "pydantic>=2.13",
     "pydantic-settings>=2.6",
     "structlog>=24.4",
+    "uvicorn>=0.54.0",
 ]
 
 [dependency-groups]
@@ -50,6 +51,10 @@ select = ["E", "F", "I", "UP", "B", "SIM", "C4", "ASYNC", "RUF"]
 "src/hocphi_mcp/models.py" = ["E501"]
 "src/hocphi_mcp/server.py" = ["E501"]
 "src/hocphi_mcp/api_client.py" = ["E501"]
+"src/hocphi_mcp/app.py" = ["E501"]
+"src/hocphi_mcp/config.py" = ["E501"]
+"src/hocphi_mcp/logging.py" = ["E501"]
+"src/hocphi_mcp/middleware.py" = ["E501"]
 # "Viet–Anh" co dau gach ngang en la chu that trong nhan hien thi.
 "src/hocphi_mcp/tools/common.py" = ["E501", "RUF001"]
 "tests/*" = ["E501"]

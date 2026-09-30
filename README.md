@@ -5,9 +5,9 @@ Public, **read-only** [MCP](https://modelcontextprotocol.io) server for
 Lets an AI assistant look up and compare tuition by school and major and get the **same
 numbers as the website**, with the academic year and source, instead of guessing.
 
-> **Status: work in progress.** The typed API client, generated models, CI and the seven
-> tools are done. The HTTP server (Streamable HTTP, rate limiting), Docker image and Cloud
-> Run deployment land in the next steps.
+> **Status: work in progress.** The typed API client, generated models, CI, the seven tools and
+> the HTTP server (Streamable HTTP, host/origin checks, rate limiting, JSON logs) are done. The
+> Docker image and Cloud Run deployment land in the next steps.
 
 ## Tools (all read-only)
 
@@ -34,6 +34,32 @@ with their sources. It never touches the database.
 ```
 AI client ──MCP (Streamable HTTP)──▶ hocphi-mcp (Cloud Run) ──HTTPS──▶ hocphi API (Fly) ──▶ Postgres
 ```
+
+## Run the server
+
+```bash
+make dev        # http://localhost:8080/mcp   (PORT=... to change)
+claude mcp add --transport http hocphi-local http://localhost:8080/mcp
+```
+
+- **Stateless Streamable HTTP** at `/mcp` (`stateless_http`): no session id, so any instance
+  can serve any request (no sticky sessions on Cloud Run). Both the legacy (`initialize`) and
+  the sessionless 2026-07-28 protocol work; tested end to end against a real uvicorn.
+- `GET /healthz` is a cheap liveness probe; it does not call the backend.
+- **Public and unauthenticated by design** (read-only data), so the guards matter:
+  - `Host` must be in `ALLOWED_HOSTS` (else `421`) and browser `Origin`s are refused (`403`)
+    — DNS-rebinding protection; official AI clients call from servers and need no CORS.
+  - Body limited to 64 KB (`413`); `Content-Type` must be JSON (`400`).
+  - **Per-client rate limit** (token bucket, default 60/min, burst 20 → `429` + `Retry-After`).
+    The client is the IP the trusted proxy appended to `X-Forwarded-For` (the left part is
+    client-controlled and ignored). Counters live in each instance's memory, so the real limit
+    is `instances × limit`: a best-effort guard. The hard cost/abuse ceiling is Cloud Run's
+    `--max-instances`. Cloud Armor / Redis were rejected as too costly for a free service.
+- Logs are one JSON line each on stdout (Cloud Logging reads `severity` / `message`): a
+  `request` line per request (method, path, status, duration, hashed client, request id),
+  a `tool_call` line per tool call (tool, duration, result count, error code) and library
+  logs, all sharing `request_id` (and `logging.googleapis.com/trace` when `GCP_PROJECT` is
+  set). Raw IPs are never logged.
 
 ## Develop
 
