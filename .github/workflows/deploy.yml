@@ -1,0 +1,104 @@
+name: Deploy
+
+# Ships to Cloud Run when a version tag is pushed (git tag v0.1.0 && git push --tags),
+# or on demand from the Actions tab. Only deploys when CI is green.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+# Two deploys at once would race on the same service; queue instead of cancelling a
+# deploy halfway.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+env:
+  SERVICE: hocphi-info-mcp
+  AR_REPO: hocphi
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+
+  deploy:
+    needs: ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write # lets GitHub mint the OIDC token Google exchanges (no stored key)
+    env:
+      REGION: ${{ vars.GCP_REGION }}
+      PROJECT: ${{ vars.GCP_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOYER_SA }}
+
+      - uses: google-github-actions/setup-gcloud@v3
+
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker "${REGION}-docker.pkg.dev" --quiet
+
+      - name: Build and push image
+        run: |
+          IMAGE="${REGION}-docker.pkg.dev/${PROJECT}/${AR_REPO}/${SERVICE}:${GITHUB_SHA}"
+          docker build --platform linux/amd64 -t "$IMAGE" .
+          docker push "$IMAGE"
+          echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
+
+      # Cloud Run's stable URL is <service>-<project number>.<region>.run.app; the
+      # project number is already inside the WIF provider path, so the allowed Host
+      # header can be set in the same deploy. (Single host: the action splits
+      # env_vars on commas.)
+      - name: Derive the service host
+        run: |
+          NUMBER="$(echo '${{ vars.GCP_WIF_PROVIDER }}' | cut -d/ -f2)"
+          echo "SERVICE_HOST=${SERVICE}-${NUMBER}.${REGION}.run.app" >> "$GITHUB_ENV"
+
+      # min-instances=0: scale to zero, idle costs nothing. max-instances=2: hard
+      # ceiling on spend and on abuse (the rate limiter is per instance).
+      - id: deploy
+        uses: google-github-actions/deploy-cloudrun@v3
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ vars.GCP_REGION }}
+          image: ${{ env.IMAGE }}
+          env_vars: |
+            ALLOWED_HOSTS=${{ env.SERVICE_HOST }}
+            GCP_PROJECT=${{ vars.GCP_PROJECT_ID }}
+          flags: >-
+            --allow-unauthenticated
+            --service-account=${{ vars.GCP_RUNTIME_SA }}
+            --min-instances=0
+            --max-instances=2
+            --concurrency=40
+            --cpu=1
+            --memory=512Mi
+            --timeout=30s
+            --port=8080
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install Python 3.12 and deps
+        run: |
+          uv python install 3.12
+          uv sync --frozen
+
+      # The first request may hit a cold start, so retry a few times before failing.
+      - name: Smoke test the live service
+        run: |
+          URL="${{ steps.deploy.outputs.url }}/mcp"
+          for attempt in 1 2 3; do
+            uv run python scripts/smoke_mcp.py "$URL" --call && exit 0
+            echo "attempt ${attempt} failed, retrying in 10s"; sleep 10
+          done
+          exit 1
