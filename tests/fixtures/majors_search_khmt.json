@@ -1,0 +1,359 @@
+[
+ {
+  "program": {
+   "id": "01M24ZWR36M6KY9884NQ8Q4MG5",
+   "schoolSlug": "dh-bach-khoa-tphcm",
+   "majorSlug": "khoa-hoc-may-tinh",
+   "track": "quoc_te",
+   "language": "en",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "major": {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74801",
+     "name": "M\u00e1y t\u00ednh"
+    }
+   },
+   "aliases": [
+    "computer science",
+    "cs",
+    "khmt"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M24ZWR36M6KY9884NQ8Q4MG5",
+   "academicYear": "2026-2027",
+   "amountPerYear": 88000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M24ZWQVQTD6T3R058CKJ9SND",
+   "schoolSlug": "dh-bach-khoa-tphcm",
+   "majorSlug": "khoa-hoc-may-tinh",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "major": {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74801",
+     "name": "M\u00e1y t\u00ednh"
+    }
+   },
+   "aliases": [
+    "computer science",
+    "cs",
+    "khmt"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M24ZWQVQTD6T3R058CKJ9SND",
+   "academicYear": "2026-2027",
+   "amountPerYear": 31500000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M24ZWR27A0RPN5YZGT90MK56",
+   "schoolSlug": "dh-bach-khoa-tphcm",
+   "majorSlug": "khoa-hoc-may-tinh",
+   "track": "chat_luong_cao",
+   "language": "en",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "major": {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74801",
+     "name": "M\u00e1y t\u00ednh"
+    }
+   },
+   "aliases": [
+    "computer science",
+    "cs",
+    "khmt"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M24ZWR27A0RPN5YZGT90MK56",
+   "academicYear": "2026-2027",
+   "amountPerYear": 88000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M24ZWR4YHPVTFP7RZFF8TJQD",
+   "schoolSlug": "dh-bach-khoa-tphcm",
+   "majorSlug": "khoa-hoc-may-tinh",
+   "track": "chat_luong_cao",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "major": {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74801",
+     "name": "M\u00e1y t\u00ednh"
+    }
+   },
+   "aliases": [
+    "computer science",
+    "cs",
+    "khmt"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M24ZWR4YHPVTFP7RZFF8TJQD",
+   "academicYear": "2026-2027",
+   "amountPerYear": 63000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M24ZWR2Q63FEWPZT3K1GD014",
+   "schoolSlug": "dh-bach-khoa-tphcm",
+   "majorSlug": "khoa-hoc-may-tinh",
+   "track": "tien_tien",
+   "language": "en",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "major": {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74801",
+     "name": "M\u00e1y t\u00ednh"
+    }
+   },
+   "aliases": [
+    "computer science",
+    "cs",
+    "khmt"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M24ZWR2Q63FEWPZT3K1GD014",
+   "academicYear": "2026-2027",
+   "amountPerYear": 88000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1RDG6279JS201H1PCJX4APR",
+   "schoolSlug": "hutech",
+   "majorSlug": "khoa-hoc-may-tinh",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "hutech",
+   "name": "\u0110H C\u00f4ng ngh\u1ec7 TP.HCM",
+   "shortName": "HUTECH",
+   "cityCode": "HCM",
+   "category": "tu_thuc",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+  },
+  "major": {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74801",
+     "name": "M\u00e1y t\u00ednh"
+    }
+   },
+   "aliases": [
+    "computer science",
+    "cs",
+    "khmt"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1RDG6279JS201H1PCJX4APR",
+   "academicYear": "2026-2027",
+   "amountPerYear": 61875000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ },
+ {
+  "program": {
+   "id": "01M1REAY5J6AH90FX0YZF525PH",
+   "schoolSlug": "dh-quoc-te-tphcm",
+   "majorSlug": "khoa-hoc-may-tinh",
+   "track": "dai_tra",
+   "language": "vi",
+   "campus": null,
+   "displayName": null
+  },
+  "school": {
+   "slug": "dh-quoc-te-tphcm",
+   "name": "\u0110H Qu\u1ed1c t\u1ebf (\u0110HQG-HCM)",
+   "shortName": "IU",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png"
+  },
+  "major": {
+   "slug": "khoa-hoc-may-tinh",
+   "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+   "code": "7480101",
+   "taxonomy": {
+    "field": {
+     "code": "748",
+     "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+    },
+    "group": {
+     "code": "74801",
+     "name": "M\u00e1y t\u00ednh"
+    }
+   },
+   "aliases": [
+    "computer science",
+    "cs",
+    "khmt"
+   ],
+   "standardYears": 4,
+   "requiresPracticeLicense": false,
+   "practiceProfession": null
+  },
+  "year1": {
+   "programId": "01M1REAY5J6AH90FX0YZF525PH",
+   "academicYear": "2025-2026",
+   "amountPerYear": 55000000,
+   "isProjected": false,
+   "confidence": "published_unverified",
+   "source": null
+  },
+  "increase": null
+ }
+]

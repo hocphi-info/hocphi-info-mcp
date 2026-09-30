@@ -1,0 +1,21 @@
+[
+ {
+  "school": {
+   "slug": "dh-bach-khoa-tphcm",
+   "name": "\u0110H B\u00e1ch Khoa TP.HCM",
+   "shortName": "HCMUT",
+   "cityCode": "HCM",
+   "category": "cong_lap_tu_chu",
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  },
+  "stats": {
+   "nPrograms": 41,
+   "minAmount": 31500000,
+   "minMajorName": "C\u00f4ng ngh\u1ec7 k\u1ef9 thu\u1eadt v\u1eadt li\u1ec7u x\u00e2y d\u1ef1ng",
+   "medianAmount": 31500000.0,
+   "maxAmount": 31500000,
+   "maxMajorName": "C\u00f4ng ngh\u1ec7 k\u1ef9 thu\u1eadt v\u1eadt li\u1ec7u x\u00e2y d\u1ef1ng",
+   "increaseSummary": "\u2014"
+  }
+ }
+]

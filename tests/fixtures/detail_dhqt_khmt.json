@@ -1,0 +1,99 @@
+{
+ "school": {
+  "slug": "dh-quoc-te-tphcm",
+  "name": "\u0110H Qu\u1ed1c t\u1ebf (\u0110HQG-HCM)",
+  "shortName": "IU",
+  "cityCode": "HCM",
+  "category": "cong_lap_tu_chu",
+  "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png"
+ },
+ "major": {
+  "slug": "khoa-hoc-may-tinh",
+  "name": "Khoa h\u1ecdc m\u00e1y t\u00ednh",
+  "code": "7480101",
+  "taxonomy": {
+   "field": {
+    "code": "748",
+    "name": "M\u00e1y t\u00ednh v\u00e0 c\u00f4ng ngh\u1ec7 th\u00f4ng tin"
+   },
+   "group": {
+    "code": "74801",
+    "name": "M\u00e1y t\u00ednh"
+   }
+  },
+  "aliases": [
+   "computer science",
+   "cs",
+   "khmt"
+  ],
+  "standardYears": 4,
+  "requiresPracticeLicense": false,
+  "practiceProfession": null
+ },
+ "programs": [
+  {
+   "program": {
+    "id": "01M1REAY5J6AH90FX0YZF525PH",
+    "schoolSlug": "dh-quoc-te-tphcm",
+    "majorSlug": "khoa-hoc-may-tinh",
+    "track": "dai_tra",
+    "language": "vi",
+    "campus": null,
+    "displayName": null
+   },
+   "year1": {
+    "programId": "01M1REAY5J6AH90FX0YZF525PH",
+    "academicYear": "2025-2026",
+    "amountPerYear": 55000000,
+    "isProjected": false,
+    "confidence": "published_unverified",
+    "source": {
+     "url": "https://edusoftweb.hcmiu.edu.vn/Upload/TH%C3%94NG%20BAO%20H%E1%BB%8CC%20PH%C3%8D%20HK2-25-26%20K25%20-TATC%20-%20Signed%20(4).pdf",
+     "docType": "thong_bao_hoc_phi",
+     "publishedDate": "2026-01-14"
+    }
+   },
+   "increase": null,
+   "yearlyAmounts": [
+    {
+     "academicYear": "2025-2026",
+     "amountPerYear": 55000000,
+     "isProjected": false
+    },
+    {
+     "academicYear": "2026-2027",
+     "amountPerYear": 60500000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2027-2028",
+     "amountPerYear": 66550000,
+     "isProjected": true
+    },
+    {
+     "academicYear": "2028-2029",
+     "amountPerYear": 73205000,
+     "isProjected": true
+    }
+   ],
+   "totalCourse": 255255000,
+   "totalWithLicense": 255255000
+  }
+ ],
+ "relatedMajors": [
+  {
+   "slug": "ky-thuat-may-tinh",
+   "name": "K\u1ef9 thu\u1eadt m\u00e1y t\u00ednh",
+   "nSchools": 2,
+   "minYear1Amount": 31500000,
+   "maxYear1Amount": 61875000
+  },
+  {
+   "slug": "tri-tue-nhan-tao",
+   "name": "Tr\u00ed tu\u1ec7 nh\u00e2n t\u1ea1o",
+   "nSchools": 2,
+   "minYear1Amount": 35500000,
+   "maxYear1Amount": 61875000
+  }
+ ]
+}
