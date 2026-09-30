@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Daily: catches the backend changing its API contract (openapi.json) while this repo
+  # has no commits of its own to trigger a run.
+  schedule:
+    - cron: "37 2 * * *"
+  workflow_dispatch:
+  # Reused by the deploy workflow: a release only ships when this is green.
+  workflow_call:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install Python 3.12
+        run: uv python install 3.12
+
+      - name: uv sync
+        run: uv sync --frozen
+
+      - name: ruff check
+        run: uv run ruff check .
+
+      - name: ruff format --check
+        run: uv run ruff format --check .
+
+      - name: mypy
+        run: uv run mypy src tests
+
+      # Regenerate the API models from the backend's openapi.json on `main`; any diff means
+      # the committed api_models.py is out of date with the backend contract.
+      - name: API models match the backend contract
+        run: |
+          ./scripts/gen_models.sh
+          git diff --exit-code -- src/hocphi_mcp/api_models.py
+
+      - name: pytest
+        run: uv run pytest -q
