@@ -5,9 +5,22 @@ Public, **read-only** [MCP](https://modelcontextprotocol.io) server for
 Lets an AI assistant look up and compare tuition by school and major and get the **same
 numbers as the website**, with the academic year and source, instead of guessing.
 
-> **Status: work in progress.** The typed API client, generated models, CI, the seven tools and
-> the HTTP server (Streamable HTTP, host/origin checks, rate limiting, JSON logs) are done. The
-> Docker image is done too; the Cloud Run deployment lands in the next steps.
+> **Status: the public Cloud Run service is switched off (2026-10-12) to save money.** The
+> code is complete: typed API client, generated models, CI, the seven tools and the HTTP server
+> (Streamable HTTP, host/origin checks, rate limiting, JSON logs), plus the Docker image and the
+> deploy workflow. But `https://hocphi-info-mcp-722605738307.asia-southeast1.run.app/mcp` no
+> longer answers.
+>
+> **Why:** Cloud Run billed about ₫49k (gross, covered by free-trial credit) in the first 11 days
+> of October even though nobody was calling the server. The only requests came from one
+> developer's AI client holding a `GET /mcp` stream open (about 31 s each, reconnecting), which
+> kept an instance alive all day. The free tier does not apply to Tier 2 regions such as
+> `asia-southeast1`, so idle-looking traffic still cost money.
+>
+> **To bring it back:** push a `v*` tag (or run the *Deploy* workflow by hand); it recreates the
+> service from the image in Artifact Registry. Before that, consider making `GET /mcp` return
+> `405` so clients do not hold streams open. The daily *Smoke* schedule is disabled while the
+> service is off; run it manually after redeploying.
 
 ## Tools (all read-only)
 
