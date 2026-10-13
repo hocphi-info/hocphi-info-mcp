@@ -3,9 +3,11 @@ name: Smoke
 # Daily check that the deployed service still answers and can reach the backend API.
 # The service is public and stateless, so this needs no Google credentials. Each run
 # wakes the service from zero (a few seconds of compute, far inside the free tier).
+# The daily schedule is off while the Cloud Run service is shut down (to save money, see
+# README). Re-enable it after redeploying:
+#   schedule:
+#     - cron: "17 3 * * *"
 on:
-  schedule:
-    - cron: "17 3 * * *"
   workflow_dispatch:
 
 jobs:
