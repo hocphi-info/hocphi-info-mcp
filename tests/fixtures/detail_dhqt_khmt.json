@@ -5,7 +5,8 @@
   "shortName": "IU",
   "cityCode": "HCM",
   "category": "cong_lap_tu_chu",
-  "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png"
+  "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png",
+  "tuitionDisclosure": null
  },
  "major": {
   "slug": "khoa-hoc-may-tinh",

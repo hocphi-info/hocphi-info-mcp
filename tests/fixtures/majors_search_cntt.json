@@ -15,7 +15,8 @@
    "shortName": "HCMUT",
    "cityCode": "HCM",
    "category": "cong_lap_tu_chu",
-   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png",
+   "tuitionDisclosure": null
   },
   "major": {
    "slug": "cong-nghe-thong-tin",
@@ -66,7 +67,8 @@
    "shortName": "HUTECH",
    "cityCode": "HCM",
    "category": "tu_thuc",
-   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png"
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/vi/thumb/8/81/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png/250px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_C%C3%B4ng_ngh%E1%BB%87_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.png",
+   "tuitionDisclosure": null
   },
   "major": {
    "slug": "cong-nghe-thong-tin",
@@ -117,7 +119,8 @@
    "shortName": "UIT",
    "cityCode": "HCM",
    "category": "cong_lap_tu_chu",
-   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png"
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png",
+   "tuitionDisclosure": null
   },
   "major": {
    "slug": "cong-nghe-thong-tin",
@@ -168,7 +171,8 @@
    "shortName": "UIT",
    "cityCode": "HCM",
    "category": "cong_lap_tu_chu",
-   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png"
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_UIT_updated.svg/330px-Logo_UIT_updated.svg.png",
+   "tuitionDisclosure": null
   },
   "major": {
    "slug": "cong-nghe-thong-tin",
@@ -219,7 +223,8 @@
    "shortName": "HSU",
    "cityCode": "HCM",
    "category": "tu_thuc",
-   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo-E-BHSU.png/330px-Logo-E-BHSU.png"
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Logo-E-BHSU.png/330px-Logo-E-BHSU.png",
+   "tuitionDisclosure": null
   },
   "major": {
    "slug": "cong-nghe-thong-tin",
@@ -270,7 +275,8 @@
    "shortName": "OU",
    "cityCode": "HCM",
    "category": "cong_lap_tu_chu",
-   "logoUrl": "https://upload.wikimedia.org/wikipedia/vi/b/b2/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png"
+   "logoUrl": "https://upload.wikimedia.org/wikipedia/vi/b/b2/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_M%E1%BB%9F_TPHCM.png",
+   "tuitionDisclosure": null
   },
   "major": {
    "slug": "cong-nghe-thong-tin",
@@ -321,7 +327,8 @@
    "shortName": "IU",
    "cityCode": "HCM",
    "category": "cong_lap_tu_chu",
-   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png"
+   "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_IUHCM.png/250px-Logo_IUHCM.png",
+   "tuitionDisclosure": null
   },
   "major": {
    "slug": "cong-nghe-thong-tin",
