@@ -5,7 +5,8 @@
   "shortName": "HCMUT",
   "cityCode": "HCM",
   "category": "cong_lap_tu_chu",
-  "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png"
+  "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/250px-HCMUT_official_logo.png",
+  "tuitionDisclosure": null
  },
  "major": {
   "slug": "khoa-hoc-may-tinh",

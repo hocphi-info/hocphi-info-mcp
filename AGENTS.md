@@ -41,7 +41,7 @@ tests/            # respx fakes the backend; fixtures/ hold real API responses
 ## Conventions
 
 - `api_models.py` is generated: change the backend model, `make openapi` there, then `make gen-models` here.
-  `make gen-check` (and CI, plus a daily cron) fail when it is out of date.
+  `make gen-check` (and CI) fail when it is out of date.
 - Tool output models (`models.py`) are hand-written and separate from the generated parsing models.
 - Tool descriptions, field descriptions and errors are for the **LLM**: keep them in English, short,
   and concrete (tell it the next tool to call). Data values (names) stay Vietnamese.

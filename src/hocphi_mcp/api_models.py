@@ -73,28 +73,6 @@ class RelatedMajorOut(BaseModel):
     ]
 
 
-class SchoolOut(BaseModel):
-    slug: Annotated[str, Field(title="Slug")]
-    name: Annotated[str, Field(title="Name")]
-    short_name: Annotated[str | None, Field(alias="shortName", title="Shortname")]
-    city_code: Annotated[
-        Literal["HCM", "HN"],
-        Field(
-            alias="cityCode",
-            description="Ma thanh pho — bang tra cuu `cities`, KHONG phai ENUM Postgres. Enum nay\nchi de OpenAPI/FE co union type; test `test_openapi_contract` giu no khop\nvoi du lieu seed (them thanh pho moi ma quen them vao day -> test do).",
-            title="CityCode",
-        ),
-    ]
-    category: Annotated[
-        Literal["cong_lap", "cong_lap_tu_chu", "tu_thuc", "tu_thuc_von_nuoc_ngoai"],
-        Field(
-            description="Gop `type` + `autonomy_status` cua brief thanh 1 enum (schema.md §3 schools).",
-            title="SchoolCategory",
-        ),
-    ]
-    logo_url: Annotated[str | None, Field(alias="logoUrl", title="Logourl")]
-
-
 class SchoolStatsOut(BaseModel):
     n_programs: Annotated[int, Field(alias="nPrograms", title="Nprograms")]
     min_amount: Annotated[int, Field(alias="minAmount", title="Minamount")]
@@ -174,6 +152,19 @@ class TaxonomyOut(BaseModel):
 class TaxonomySummaryOut(BaseModel):
     n_majors: Annotated[int, Field(alias="nMajors", title="Nmajors")]
     n_programs: Annotated[int, Field(alias="nPrograms", title="Nprograms")]
+
+
+class TuitionDisclosureOut(BaseModel):
+    level: Annotated[
+        Literal["theo_nganh", "khong_minh_bach"],
+        Field(
+            description="Muc do truong cong khai hoc phi (danh gia tay, cap truong — migration 0008).\n\nChi 2 muc, owner chot 2026-10-16. NULL o DB = chua danh gia (FE khong hien).",
+            title="TuitionDisclosure",
+        ),
+    ]
+    checked_on: Annotated[date, Field(alias="checkedOn", title="Checkedon")]
+    evidence_url: Annotated[str, Field(alias="evidenceUrl", title="Evidenceurl")]
+    note: Annotated[str | None, Field(title="Note")]
 
 
 class TuitionRecordOut(BaseModel):
@@ -288,6 +279,31 @@ class ProgramOut(BaseModel):
     ]
     campus: Annotated[str | None, Field(title="Campus")]
     display_name: Annotated[str | None, Field(alias="displayName", title="Displayname")]
+
+
+class SchoolOut(BaseModel):
+    slug: Annotated[str, Field(title="Slug")]
+    name: Annotated[str, Field(title="Name")]
+    short_name: Annotated[str | None, Field(alias="shortName", title="Shortname")]
+    city_code: Annotated[
+        Literal["HCM", "HN"],
+        Field(
+            alias="cityCode",
+            description="Ma thanh pho — bang tra cuu `cities`, KHONG phai ENUM Postgres. Enum nay\nchi de OpenAPI/FE co union type; test `test_openapi_contract` giu no khop\nvoi du lieu seed (them thanh pho moi ma quen them vao day -> test do).",
+            title="CityCode",
+        ),
+    ]
+    category: Annotated[
+        Literal["cong_lap", "cong_lap_tu_chu", "tu_thuc", "tu_thuc_von_nuoc_ngoai"],
+        Field(
+            description="Gop `type` + `autonomy_status` cua brief thanh 1 enum (schema.md §3 schools).",
+            title="SchoolCategory",
+        ),
+    ]
+    logo_url: Annotated[str | None, Field(alias="logoUrl", title="Logourl")]
+    tuition_disclosure: Annotated[
+        TuitionDisclosureOut | None, Field(alias="tuitionDisclosure")
+    ]
 
 
 class SchoolProgramRowOut(BaseModel):

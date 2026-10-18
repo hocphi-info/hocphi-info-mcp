@@ -49,7 +49,7 @@ fetches, validates, caches and presents them with their sources.
 | **Call the Fly origin, not `api.hocphi.info`** | The public hostname sits behind Cloudflare, which returns 403 to some User-Agents (verified with `curl -A`), and datacenter IPs might be challenged. Server-to-server traffic doesn't need that layer. | Bypasses Cloudflare's DDoS/cache for this path — fine at this volume; the client also sends an explicit `User-Agent`. |
 | **In-memory per-client rate limit + `--max-instances`** | Free, no shared store, simple to reason about. Cloud Armor needs a load balancer (~$18/month); Redis/Memorystore costs money. | Each instance counts separately → real limit is `instances × limit`. The instance cap is the hard ceiling. |
 | **TTL cache with single-flight in memory** | The two big lists rarely change (only when data is seeded); single-flight prevents a stampede when an entry expires. | Cache is lost when the instance scales to zero; up to 10 minutes stale after a data update. |
-| **Generated API models + drift CI** | The backend's `openapi.json` is the contract; the client models are generated and CI (plus a daily cron) fails when they drift. | One more generated file to keep in sync. |
+| **Generated API models + drift CI** | The backend's `openapi.json` is the contract; the client models are generated and CI fails when they drift. | One more generated file to keep in sync. |
 | **No secrets at runtime** | The backend is public, so there is nothing to protect; deployment is keyless (see §7). | If the backend ever needs a token, Secret Manager gets its first real use. |
 
 ## 4. Life of one request (built)
@@ -89,7 +89,7 @@ The backend publishes `openapi.json`; `datamodel-codegen` (version pinned) gener
 `api_models.py`, used only to *parse* backend responses (unknown fields ignored, missing required
 fields fail loudly). Tool output models are hand-written and separate, so the assistant sees a
 small, stable, well-described shape. CI regenerates the models from the backend's `main` and
-fails on any diff, and runs daily, so a backend change is noticed even when this repo is idle.
+fails on any diff. There is no scheduled run (the service is shut down to save money), so after a backend change run `make gen-models` by hand.
 
 ## 6. Failure modes
 
@@ -98,7 +98,7 @@ fails on any diff, and runs daily, so a backend change is noticed even when this
 | Backend down or slow | Tools error with `upstream_unavailable` (retryable) | Timeout 12 s × up to 3 attempts; cached lists still served while fresh. |
 | Fly machine resuming | Transient 403/5xx for ~1 s | Retried like the website's own client. |
 | Cloudflare blocks a client | 403 on `api.hocphi.info` | Default is the Fly origin; explicit `User-Agent`; smoke test after deploy catches it. |
-| Backend adds/changes a field | Parsing could break | `extra=ignore` for additions; CI/cron regenerates models and fails on real drift. |
+| Backend adds/changes a field | Parsing could break | `extra=ignore` for additions; CI regenerates models and fails on real drift. |
 | Data missing (school not crawled) | Assistant might guess | `not_found` with hints, `instructions` tell the model not to use figures from memory. |
 | Abuse / traffic spike | Cost or backend load | Rate limit, 64 KB body cap, `max-instances`, backend cache; budget alert (planned). |
 | Instance restarts | Cache and rate-limit counters reset | Acceptable; nothing durable lives here. |

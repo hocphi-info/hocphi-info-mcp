@@ -100,8 +100,8 @@ uv run python scripts/smoke_real_api.py   # call the real API through the client
 
 - `src/hocphi_mcp/api_models.py` is **generated** from the backend's `openapi.json`
   (`main` of `hocphi-info-be`); never edit it by hand. Set `OPENAPI_SRC=../hocphi-info-be/openapi.json`
-  to develop against a local backend spec. CI regenerates it and fails on any diff, and runs
-  daily, so a backend contract change is noticed even when this repo has no commits.
+  to develop against a local backend spec. CI regenerates it and fails on any diff. There is no
+  scheduled run: after a backend contract change, run `make gen-models` here.
 - Configuration is via environment variables (see `.env.example`); defaults are production-ready.
 - By default the client calls the Fly origin (`https://hocphi-info-api.fly.dev`) rather than
   `api.hocphi.info`: the latter is behind Cloudflare, which blocks some User-Agents, and
