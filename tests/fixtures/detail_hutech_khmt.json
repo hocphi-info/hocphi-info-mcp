@@ -51,7 +51,8 @@
     "source": {
      "url": "https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026",
      "docType": "thong_bao_hoc_phi",
-     "publishedDate": "2026-06-25"
+     "publishedDate": "2026-06-25",
+     "checkedAt": null
     }
    },
    "increase": null,
@@ -96,5 +97,6 @@
    "minYear1Amount": 35500000,
    "maxYear1Amount": 61875000
   }
- ]
+ ],
+ "postGrad": null
 }

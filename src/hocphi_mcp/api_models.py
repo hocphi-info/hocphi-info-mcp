@@ -3,8 +3,52 @@
 
 from __future__ import annotations
 from typing import Annotated, Any, Literal
-from pydantic import BaseModel, Field
+from pydantic import AwareDatetime, BaseModel, Field, RootModel
 from datetime import date
+
+
+class ParentId(RootModel[str]):
+    root: Annotated[str, Field(max_length=40, title="Parentid")]
+
+
+class AuthorName(RootModel[str]):
+    root: Annotated[str, Field(max_length=500, title="Authorname")]
+
+
+class TurnstileToken(RootModel[str]):
+    root: Annotated[str, Field(max_length=4096, title="Turnstiletoken")]
+
+
+class CommentCreateIn(BaseModel):
+    thread_key: Annotated[
+        str, Field(alias="threadKey", max_length=220, title="Threadkey")
+    ]
+    parent_id: Annotated[ParentId | None, Field(alias="parentId", title="Parentid")] = (
+        None
+    )
+    author_name: Annotated[
+        AuthorName | None, Field(alias="authorName", title="Authorname")
+    ] = None
+    body: Annotated[str, Field(max_length=10000, title="Body")]
+    turnstile_token: Annotated[
+        TurnstileToken | None, Field(alias="turnstileToken", title="Turnstiletoken")
+    ] = None
+
+
+class CommentOut(BaseModel):
+    id: Annotated[str, Field(title="Id")]
+    parent_id: Annotated[str | None, Field(alias="parentId", title="Parentid")]
+    root_id: Annotated[str | None, Field(alias="rootId", title="Rootid")]
+    depth: Annotated[int, Field(title="Depth")]
+    author_name: Annotated[str | None, Field(alias="authorName", title="Authorname")]
+    author_tag: Annotated[str | None, Field(alias="authorTag", title="Authortag")]
+    body: Annotated[str | None, Field(title="Body")]
+    is_hidden: Annotated[bool, Field(alias="isHidden", title="Ishidden")]
+    created_at: Annotated[AwareDatetime, Field(alias="createdAt", title="Createdat")]
+
+
+class CommentReportOut(BaseModel):
+    hidden: Annotated[bool, Field(title="Hidden")]
 
 
 class CoverageCityRowOut(BaseModel):
@@ -110,6 +154,9 @@ class SourceOut(BaseModel):
     published_date: Annotated[
         date | None, Field(alias="publishedDate", title="Publisheddate")
     ]
+    checked_at: Annotated[
+        AwareDatetime | None, Field(alias="checkedAt", title="Checkedat")
+    ]
 
 
 class TaxonomyChildOut(BaseModel):
@@ -193,6 +240,35 @@ class YearlyAmountOut(BaseModel):
     is_projected: Annotated[bool, Field(alias="isProjected", title="Isprojected")]
 
 
+class CommentCreatedOut(BaseModel):
+    comment: CommentOut
+    delete_token: Annotated[str, Field(alias="deleteToken", title="Deletetoken")]
+
+
+class CommentListOut(BaseModel):
+    thread_key: Annotated[str, Field(alias="threadKey", title="Threadkey")]
+    sort: Annotated[
+        Literal["newest", "oldest"],
+        Field(
+            description="Thu tu binh luan GOC (tra loi luon cu -> moi). Khong phai ENUM Postgres.",
+            title="CommentSort",
+        ),
+    ]
+    total: Annotated[int, Field(title="Total")]
+    comments: Annotated[list[CommentOut], Field(title="Comments")]
+    next_offset: Annotated[int | None, Field(alias="nextOffset", title="Nextoffset")]
+
+
+class CommentReportIn(BaseModel):
+    reason: Annotated[
+        Literal["spam", "sai_lech", "xuc_pham", "thong_tin_ca_nhan", "khac"],
+        Field(
+            description="Ly do bao cao 1 binh luan (migration 0009). FE hien nhan tieng Viet.",
+            title="CommentReportReason",
+        ),
+    ]
+
+
 class CoverageCategoryRowOut(BaseModel):
     category: Annotated[
         Literal["cong_lap", "cong_lap_tu_chu", "tu_thuc", "tu_thuc_von_nuoc_ngoai"],
@@ -257,6 +333,23 @@ class MajorOut(BaseModel):
     practice_profession: Annotated[
         str | None, Field(alias="practiceProfession", title="Practiceprofession")
     ]
+
+
+class PostGradStepOut(BaseModel):
+    step_order: Annotated[int, Field(alias="stepOrder", title="Steporder")]
+    step_name: Annotated[str, Field(alias="stepName", title="Stepname")]
+    provider: Annotated[str | None, Field(title="Provider")]
+    duration_months: Annotated[
+        int | None, Field(alias="durationMonths", title="Durationmonths")
+    ]
+    cost_min: Annotated[int, Field(alias="costMin", title="Costmin")]
+    cost_max: Annotated[int, Field(alias="costMax", title="Costmax")]
+    confidence: Annotated[
+        Literal["verified", "published_unverified", "estimated"],
+        Field(title="ConfidenceLevel"),
+    ]
+    note: Annotated[str | None, Field(title="Note")]
+    source: SourceOut | None
 
 
 class ProgramOut(BaseModel):
@@ -356,6 +449,20 @@ class MajorRowOut(BaseModel):
     increase: ProgramIncreaseOut | None
 
 
+class PostGradOut(BaseModel):
+    profession: Annotated[str, Field(title="Profession")]
+    steps: Annotated[list[PostGradStepOut], Field(title="Steps")]
+    total_cost_min: Annotated[int, Field(alias="totalCostMin", title="Totalcostmin")]
+    total_cost_max: Annotated[int, Field(alias="totalCostMax", title="Totalcostmax")]
+    total_months: Annotated[int, Field(alias="totalMonths", title="Totalmonths")]
+    has_unknown_duration: Annotated[
+        bool, Field(alias="hasUnknownDuration", title="Hasunknownduration")
+    ]
+    checked_at: Annotated[
+        AwareDatetime | None, Field(alias="checkedAt", title="Checkedat")
+    ]
+
+
 class ProgramDetailOut(BaseModel):
     program: ProgramOut
     year1: TuitionRecordOut
@@ -376,6 +483,7 @@ class ProgramDetailResponseOut(BaseModel):
     related_majors: Annotated[
         list[RelatedMajorOut], Field(alias="relatedMajors", title="Relatedmajors")
     ]
+    post_grad: Annotated[PostGradOut | None, Field(alias="postGrad")]
 
 
 class SchoolDetailResponseOut(BaseModel):

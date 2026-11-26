@@ -51,7 +51,8 @@
     "source": {
      "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
      "docType": "thong_bao_hoc_phi",
-     "publishedDate": "2026-06-18"
+     "publishedDate": "2026-06-18",
+     "checkedAt": null
     }
    },
    "increase": null,
@@ -99,7 +100,8 @@
     "source": {
      "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
      "docType": "thong_bao_hoc_phi",
-     "publishedDate": "2026-06-18"
+     "publishedDate": "2026-06-18",
+     "checkedAt": null
     }
    },
    "increase": null,
@@ -147,7 +149,8 @@
     "source": {
      "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
      "docType": "thong_bao_hoc_phi",
-     "publishedDate": "2026-06-18"
+     "publishedDate": "2026-06-18",
+     "checkedAt": null
     }
    },
    "increase": null,
@@ -195,7 +198,8 @@
     "source": {
      "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
      "docType": "thong_bao_hoc_phi",
-     "publishedDate": "2026-06-18"
+     "publishedDate": "2026-06-18",
+     "checkedAt": null
     }
    },
    "increase": null,
@@ -243,7 +247,8 @@
     "source": {
      "url": "https://hcmut.edu.vn/bai-viet/thong-bao-muc-thu-hoc-phi--nam-hoc-2026-2027",
      "docType": "thong_bao_hoc_phi",
-     "publishedDate": "2026-06-18"
+     "publishedDate": "2026-06-18",
+     "checkedAt": null
     }
    },
    "increase": null,
@@ -288,5 +293,6 @@
    "minYear1Amount": 35500000,
    "maxYear1Amount": 61875000
   }
- ]
+ ],
+ "postGrad": null
 }
