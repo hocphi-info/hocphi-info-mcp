@@ -51,7 +51,8 @@
     "source": {
      "url": "https://edusoftweb.hcmiu.edu.vn/Upload/TH%C3%94NG%20BAO%20H%E1%BB%8CC%20PH%C3%8D%20HK2-25-26%20K25%20-TATC%20-%20Signed%20(4).pdf",
      "docType": "thong_bao_hoc_phi",
-     "publishedDate": "2026-01-14"
+     "publishedDate": "2026-01-14",
+     "checkedAt": null
     }
    },
    "increase": null,
@@ -96,5 +97,6 @@
    "minYear1Amount": 35500000,
    "maxYear1Amount": 61875000
   }
- ]
+ ],
+ "postGrad": null
 }
