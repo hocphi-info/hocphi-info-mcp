@@ -342,8 +342,8 @@ class PostGradStepOut(BaseModel):
     duration_months: Annotated[
         int | None, Field(alias="durationMonths", title="Durationmonths")
     ]
-    cost_min: Annotated[int, Field(alias="costMin", title="Costmin")]
-    cost_max: Annotated[int, Field(alias="costMax", title="Costmax")]
+    cost_min: Annotated[int | None, Field(alias="costMin", title="Costmin")]
+    cost_max: Annotated[int | None, Field(alias="costMax", title="Costmax")]
     confidence: Annotated[
         Literal["verified", "published_unverified", "estimated"],
         Field(title="ConfidenceLevel"),
@@ -454,6 +454,9 @@ class PostGradOut(BaseModel):
     steps: Annotated[list[PostGradStepOut], Field(title="Steps")]
     total_cost_min: Annotated[int, Field(alias="totalCostMin", title="Totalcostmin")]
     total_cost_max: Annotated[int, Field(alias="totalCostMax", title="Totalcostmax")]
+    has_unknown_cost: Annotated[
+        bool, Field(alias="hasUnknownCost", title="Hasunknowncost")
+    ]
     total_months: Annotated[int, Field(alias="totalMonths", title="Totalmonths")]
     has_unknown_duration: Annotated[
         bool, Field(alias="hasUnknownDuration", title="Hasunknownduration")
